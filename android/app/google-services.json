@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "614588481077",
+    "project_id": "burgan-task",
+    "storage_bucket": "burgan-task.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614588481077:android:19b23cc941a317ce5fbb7c",
+        "android_client_info": {
+          "package_name": "com.example.burgan_task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdvHzoZG1ytJGuFtCZGbQVCXMFxl93A1o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
