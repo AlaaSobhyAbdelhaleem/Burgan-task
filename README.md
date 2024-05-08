@@ -50,6 +50,8 @@ A Flutter app designed to provide users with most popular articles on various to
 - **encrypt:** A set of high-level APIs over PointyCastle for two-way cryptography.
 - **google_fonts:** To use fonts from. 
 - **flutter_gen:** Code generator for your assets, fonts, colors. 
+- **flutter_dotenv:** An environment is the set of variables known to a process. 
+
 
 
 

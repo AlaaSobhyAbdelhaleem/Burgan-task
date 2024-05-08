@@ -19,7 +19,7 @@ class _ArticleRepository implements ArticleRepository {
   String? baseUrl;
 
   @override
-  Future<Result> getArticles() async {
+  Future<Result> getArticles(apiKey) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -32,7 +32,7 @@ class _ArticleRepository implements ArticleRepository {
     )
             .compose(
               _dio.options,
-              'emailed/1.json?api-key=Z4dBnxDGgA1YLPsgejLfboqIYBjTcdVB',
+              'emailed/1.json?api-key=${apiKey}',
               queryParameters: queryParameters,
               data: _data,
             )

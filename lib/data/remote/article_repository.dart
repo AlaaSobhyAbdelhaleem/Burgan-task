@@ -7,8 +7,9 @@ part 'article_repository.g.dart';
 @RestApi()
 abstract class ArticleRepository {
   factory ArticleRepository(Dio dio) = _ArticleRepository;
-  static const String apiKey = 'Z4dBnxDGgA1YLPsgejLfboqIYBjTcdVB';
 
-  @GET("emailed/1.json?api-key=$apiKey")
-  Future<Result> getArticles();
+  @GET("emailed/1.json?api-key={apiKey}")
+  Future<Result> getArticles(
+    @Path("apiKey") String apiKey,
+  );
 }

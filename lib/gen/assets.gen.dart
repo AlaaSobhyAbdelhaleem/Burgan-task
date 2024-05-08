@@ -30,23 +30,13 @@ class $AssetsImagesGen {
   /// File path: assets/images/otp.png
   AssetGenImage get otp => const AssetGenImage('assets/images/otp.png');
 
-  /// File path: assets/images/public.pem
-  String get public => 'assets/images/public.pem';
-
   /// File path: assets/images/register.png
   AssetGenImage get register =>
       const AssetGenImage('assets/images/register.png');
 
   /// List of all assets
-  List<dynamic> get values => [
-        articleImage,
-        biometric,
-        emailVerification,
-        login,
-        otp,
-        public,
-        register
-      ];
+  List<AssetGenImage> get values =>
+      [articleImage, biometric, emailVerification, login, otp, register];
 }
 
 class Assets {

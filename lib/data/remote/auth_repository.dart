@@ -1,8 +1,8 @@
-import 'package:burgan_task/utils/constants.dart';
 import 'package:encrypt/encrypt.dart';
 import 'package:firebase_auth/firebase_auth.dart' hide User;
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:pointycastle/asymmetric/api.dart';
 import '../model/user_model.dart';
 
@@ -35,8 +35,8 @@ class AuthRepository {
       password: user.password!,
     )
         .then((d) async {
-      final publicKey = await convertStringToRSA<RSAPublicKey>(publicStringKey);
-      final privateKey = await convertStringToRSA<RSAPrivateKey>(privateStringKey);
+      final publicKey = await convertStringToRSA<RSAPublicKey>(dotenv.get('PUPLIC_STRING_KEY'));
+      final privateKey = await convertStringToRSA<RSAPrivateKey>(dotenv.get('PRIVATE_STRING_KEY'));
 
       Encrypter encrypter = Encrypter(RSA(publicKey: publicKey, privateKey: privateKey));
       final encryptedPhone = user.phone;

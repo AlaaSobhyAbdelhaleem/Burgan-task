@@ -1,4 +1,5 @@
 import 'package:burgan_task/features/articles/article_handler.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:redux/redux.dart';
 import 'package:burgan_task/data/network_common.dart';
 import 'package:burgan_task/data/remote/article_repository.dart';
@@ -20,7 +21,7 @@ List<Middleware<AppState>> createArticleMiddleware([
 Middleware<AppState> _getArticles(ArticleRepository repository) {
   return (Store<AppState> store, dynamic action, NextDispatcher next) {
     running(next, action);
-    repository.getArticles().then((result) {
+    repository.getArticles(dotenv.get('API_KEY')).then((result) {
       next(SyncArticlesAction(articles: result.articles));
       ArticleHandler().insertArticlesToLocal(result.articles);
       completed(next, action);

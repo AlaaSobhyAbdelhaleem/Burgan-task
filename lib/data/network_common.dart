@@ -1,10 +1,11 @@
 import 'dart:convert';
 import 'package:burgan_task/data/network_handler.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class NetworkCommon {
   static final NetworkCommon _singleton = NetworkCommon._internal();
-  static const String baseUrl = "https://api.nytimes.com/svc/mostpopular/v2/";
+  static String baseUrl = dotenv.get('BASE_URL');
 
   factory NetworkCommon() {
     return _singleton;

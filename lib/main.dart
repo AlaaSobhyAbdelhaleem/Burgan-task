@@ -2,6 +2,7 @@ import 'package:burgan_task/features/splash/splash_view.dart';
 import 'package:burgan_task/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:burgan_task/redux/app/app_state.dart';
 import 'package:burgan_task/redux/store.dart';
@@ -10,6 +11,7 @@ import 'package:redux/redux.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   var store = await createStore();
   runApp(MyApp(store));
