@@ -99,7 +99,7 @@ Here [**APK**](https://drive.google.com/file/d/15kDI5TzQduXO0JvK9K6DqIWojfB2VfeY
 
 ## Video & How to use
 
-Here [**App video**](screenshots/video.MP4).
+Here [**App video**](https://drive.google.com/file/d/1UqqfyWqLyvTn9ZMq9DuyV12SErYF7PXn/view?usp=share_link).
 
 ## Installation
 1- Clone this repository: 
